@@ -89,7 +89,6 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <action selector="addRedJersey:" destination="jgE-ip-eGn" eventType="valueChanged" id="JmR-Jf-bFS"/>
-                                                        <action selector="redStepper:" destination="jgE-ip-eGn" eventType="valueChanged" id="7ik-KY-BcG"/>
                                                     </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Michael Jordan  Authentic" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3Z-G4-WkG">
@@ -188,7 +187,6 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <action selector="addGreenJersey:" destination="jgE-ip-eGn" eventType="valueChanged" id="Z1U-5a-HpE"/>
-                                                        <action selector="greenStepper:" destination="jgE-ip-eGn" eventType="valueChanged" id="FY8-30-gTg"/>
                                                     </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Larry Bird Replica" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oiz-AK-oel">
