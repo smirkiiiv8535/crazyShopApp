@@ -20,17 +20,17 @@ class AdViewController: UIViewController {
     }
        
     func startSlideShow(){
-    
-    let loadPic = [UIImage(named: "percent.png")!,UIImage(named:"jersey.png")!, UIImage(named:"shoes.png")! ,UIImage(named:"acces.png")!]
+   let loadPic = ["percent","jerseys","shoes","acces"]
+//    let loadPic = [UIImage(named: "percent")!,UIImage(named:"jerseys")!, UIImage(named:"shoes")! ,UIImage(named:"acces")!]
 
-    // var showPic: [UIImage] = []
-        
-//    for i in 0...loadPic.count-1{
-//    showPic.append(UIImage(named:loadPic[i])!)
-//    }
-//      renderImage.animationImages = showPic
-        renderImage.animationImages = loadPic
-        renderImage.animationDuration = 60
+ var showPic: [UIImage] = []
+
+    for i in 0...loadPic.count-1{
+    showPic.append(UIImage(named:loadPic[i])!)
+    }
+      renderImage.animationImages = showPic
+//        renderImage.animationImages = loadPic
+        renderImage.animationDuration = 28
         renderImage.animationRepeatCount = 0
         renderImage.startAnimating()
    }

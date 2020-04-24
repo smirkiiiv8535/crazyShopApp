@@ -10,16 +10,114 @@ import UIKit
 
 class shopClassViewer: UITableViewController {
 
+    @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var redJerseys: UILabel!
+    @IBOutlet weak var purpleJerseys: UILabel!
+    @IBOutlet weak var greenJerseys: UILabel!
+    @IBOutlet weak var blueRedJerseys: UILabel!
+    @IBOutlet weak var blueOrangeJerseys: UILabel!
+    @IBOutlet weak var blackJerseys: UILabel!
+    @IBOutlet weak var totalPrice: UILabel!
+    
+    var itemnumber1 :Int = 0
+    var itemnumber2 :Int = 0
+    var itemnumber3 :Int = 0
+    var itemnumber4 :Int = 0
+    var itemnumber5 :Int = 0
+    var itemnumber6 :Int = 0
+    var num :Int = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        clearButton.layer.borderWidth = 0.3
+        clearButton.layer.borderColor = UIColor.black.cgColor
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
+    @IBOutlet weak var redStepper: UIStepper!
+    @IBOutlet weak var purpleStepper: UIStepper!
+    @IBOutlet weak var greenStepper: UIStepper!
+    @IBOutlet weak var blueRedStepper: UIStepper!
+    @IBOutlet weak var blueOrangeStepper: UIStepper!
+    @IBOutlet weak var blackStepper: UIStepper!
+    
+    
+    @IBAction func addRedJersey(_ sender: UIStepper) {
+        itemnumber1 = Int(sender.value)
+        redJerseys.text = "\(itemnumber1)"
+        addJerseyMoney()
+    }
+    
+    @IBAction func addPurpleJersey(_ sender: UIStepper) {
+        itemnumber2 = Int(sender.value)
+        purpleJerseys.text = "\(itemnumber2)"
+        addJerseyMoney()
+    }
+    
+    @IBAction func addGreenJersey(_ sender: UIStepper) {
+        itemnumber3 = Int(sender.value)
+        greenJerseys.text = "\(itemnumber3)"
+        addJerseyMoney()
+    }
+    
+    
+    @IBAction func addBlueRedJersey(_ sender: UIStepper) {
+        itemnumber4 = Int(sender.value)
+        blueRedJerseys.text = "\(itemnumber4)"
+        addJerseyMoney()
+    }
+    
+    
+    @IBAction func addBlueOrangeJersey(_ sender: UIStepper) {
+        itemnumber5 = Int(sender.value)
+        blueOrangeJerseys.text = "\(itemnumber5)"
+        addJerseyMoney()
+    }
+    
+    
+    @IBAction func addBlackJersey(_ sender: UIStepper) {
+        itemnumber6 = Int(sender.value)
+        blackJerseys.text = "\(itemnumber6)"
+        addJerseyMoney()
+    }
+    
+  func addJerseyMoney(){
+    num = itemnumber1*400+itemnumber2*350+itemnumber3*190+itemnumber4*300+itemnumber5*150+itemnumber6*230
+    totalPrice.text =  "Total Price $ : \(num)"
+  }
+    
+    @IBAction func clearAll(_ sender: UIButton) {
+        redStepper.value = Double(0)
+        purpleStepper.value = Double(0)
+        greenStepper.value = Double(0)
+        blueRedStepper.value = Double(0)
+        blueOrangeStepper.value = Double(0)
+        blackStepper.value = Double(0)
+ 
+        itemnumber1 = 0
+        itemnumber2 = 0
+        itemnumber3 = 0
+        itemnumber4 = 0
+        itemnumber5 = 0
+        itemnumber6 = 0
+        
+       redJerseys.text = "\(0)"
+       purpleJerseys.text = "\(0)"
+       greenJerseys.text = "\(0)"
+       blueRedJerseys.text = "\(0)"
+       blueOrangeJerseys.text = "\(0)"
+       blackJerseys.text = "\(0)"
+       totalPrice.text =  "Total Price $ : \(0)"
+        
+    }
+    
     // MARK: - Table view data source
 
 //    override func numberOfSections(in tableView: UITableView) -> Int {
